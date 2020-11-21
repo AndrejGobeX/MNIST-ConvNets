@@ -5,7 +5,6 @@ import tensorflow as tf
 from tensorflow import keras
 import os
 import imageio
-#"C:\\Users\\Andrej\\AppData\\Local\\Programs\\Python\\Python38\\python.exe"
 
 model = TFNeuralNetwork(28, 10, "Checkpoints/cp.chpt")
 (training_images, training_labels), (test_images, test_labels) = tf.keras.datasets.mnist.load_data()
@@ -95,7 +94,7 @@ while not quit_flag=='y':
         expected=x
         custom=[]
 
-        path=input("Path to bmp: ")
+        path=input("Image name: ")
         image=imageio.imread("images/"+path+".bmp", as_gray=True)
 
         custom_input=np.ndarray((1, 28, 28, 1))
